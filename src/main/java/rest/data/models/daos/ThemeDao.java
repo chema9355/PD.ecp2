@@ -9,5 +9,6 @@ public interface ThemeDao extends GenericDao<Theme,Integer>{
 	Theme findByName(String themeName);
 
 	List<String> findAllNames();
+	
 
 }

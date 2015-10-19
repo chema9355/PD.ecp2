@@ -3,20 +3,34 @@ package rest.business.views;
 import java.util.ArrayList;
 import java.util.List;
 
+import rest.business.models.entities.Theme;
+
 public class TransferTheme {
 	
-	private List<String> listaTemas;
+	private List<String> themeList;
+	private String theme;
+	
+	
+	public String getTheme() {
+		return theme;
+	}
+
+	public void setTheme(String theme) {
+		this.theme = theme;
+	}
+
+	
 	
 	public TransferTheme(){
-		this.listaTemas = new ArrayList<String>();
+		this.themeList = new ArrayList<String>();
 	}
 
 	public List<String> getListaTemas() {
-		return listaTemas;
+		return themeList;
 	}
 
 	public void setListaTemas(List<String> listaTemas) {
-		this.listaTemas = listaTemas;
+		this.themeList = listaTemas;
 	}
 	
 	

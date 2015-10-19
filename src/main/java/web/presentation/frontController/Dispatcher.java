@@ -42,6 +42,8 @@ public class Dispatcher {
         case "VotingPresenter":
             VotePresenter votePresenter = new VotePresenter();
             if ("VoteTheme".equals(action)) {
+            	votePresenter.setTheme(request.getParams().get("themeName"));
+            	votePresenter.setValue(request.getParams().get("value"));
                 // TODO uI1Presenter.setters((request.getParams().get("param")));
                 nextView = votePresenter.voteTheme(model);
             } else if ("ShowThemeManager".equals(action)) {
@@ -53,8 +55,10 @@ public class Dispatcher {
             break;
         case "ThemeManagerPresenter":
             ThemePresenter themePresenter = new ThemePresenter();
+           
             if ("createTheme".equals(action)) {
-                // TODO uI2Presenter.setters((request.getParams().get("param")));
+              
+            	themePresenter.setTheme(request.getParams().get("themeName"));
                 nextView = themePresenter.createTheme(model);
             } 
             else if ("ShowVoting".equals(action)) {

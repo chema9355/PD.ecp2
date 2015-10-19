@@ -12,6 +12,7 @@ public abstract class GenericMemoryDao<T, ID> implements GenericDao<T, ID> {
 
     protected void setMap(Map<ID, T> map) {
         this.map = map;
+      
     }
 
     @Override
