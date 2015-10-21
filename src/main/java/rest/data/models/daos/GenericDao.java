@@ -2,21 +2,16 @@ package rest.data.models.daos;
 
 import java.util.List;
 
+public interface GenericDao<T, ID> {
 
-	
-	public interface GenericDao<T, ID> {
+	void create(T entity);
 
-	    void create(T entity);
+	T read(ID id);
 
-	    T read(ID id);
+	void update(T entity);
 
-	    void update(T entity);
+	void deleteById(ID id);
 
-	    void deleteById(ID id);
+	List<T> findAll();
 
-	    List<T> findAll();
-
-	}
-
-
-
+}

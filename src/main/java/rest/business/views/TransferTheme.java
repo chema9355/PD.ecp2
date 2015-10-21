@@ -1,16 +1,16 @@
 package rest.business.views;
 
 import java.util.ArrayList;
+
+import java.util.LinkedHashMap;
 import java.util.List;
 
-import rest.business.models.entities.Theme;
-
 public class TransferTheme {
-	
+
 	private List<String> themeList;
 	private String theme;
-	
-	
+	private LinkedHashMap<String, List<String>> map = new LinkedHashMap<String, List<String>>();
+
 	public String getTheme() {
 		return theme;
 	}
@@ -19,9 +19,7 @@ public class TransferTheme {
 		this.theme = theme;
 	}
 
-	
-	
-	public TransferTheme(){
+	public TransferTheme() {
 		this.themeList = new ArrayList<String>();
 	}
 
@@ -32,7 +30,13 @@ public class TransferTheme {
 	public void setListaTemas(List<String> listaTemas) {
 		this.themeList = listaTemas;
 	}
-	
-	
+
+	public LinkedHashMap<String, List<String>> getMap() {
+		return map;
+	}
+
+	public void setMap(LinkedHashMap<String, List<String>> map) {
+		this.map = map;
+	}
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import rest.business.models.entities.Theme;
 import rest.business.models.entities.Vote;
 
-public interface VoteDao extends GenericDao<Vote,Integer>{
+public interface VoteDao extends GenericDao<Vote, Integer> {
 
 	List<Vote> findByTheme(Theme theme);
 
